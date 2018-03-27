@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-amixer get Master | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p' | uniq
+amixer -D pulse sget Master | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p' | uniq
